@@ -13,6 +13,7 @@
 	<modules>
 		<module>eureka-service</module>
 		<module>product-stock-service</module>
+		<module>edge-service</module>
 	</modules>
 	
 	<parent>

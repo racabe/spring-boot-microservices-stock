@@ -11,12 +11,11 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 @SpringBootApplication
 public class EurekaServiceApplication {
 
-    /**
-     * Run the application using Spring Boot and an embedded servlet engine.
-     * 
-     * @param args
-     *            Program arguments.
-     */
+  /**
+   * Run the application using Spring Boot and an embedded servlet engine.
+   * 
+   * @param args Program arguments.
+   */
   public static void main(String[] args) {
     SpringApplication.run(EurekaServiceApplication.class, args);
   }

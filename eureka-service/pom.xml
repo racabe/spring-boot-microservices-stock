@@ -5,7 +5,7 @@
 
 	<artifactId>eureka-service</artifactId>
 	<packaging>jar</packaging>
-	
+
 	<name>Eureka service</name>
 	<description>Server to microservice registration and discovery with Spring Cloud and Netflix’s Eureka.</description>
 
@@ -24,7 +24,7 @@
 
 	<dependencies>
 		<dependency>
-			<!-- For service registration  -->
+			<!-- For service registration -->
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
@@ -38,6 +38,6 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-xml</artifactId>
-			</dependency>
+		</dependency>
 	</dependencies>
 </project>

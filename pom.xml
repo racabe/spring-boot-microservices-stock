@@ -12,6 +12,7 @@
 
 	<modules>
 		<module>eureka-service</module>
+		<module>product-stock-service</module>
 	</modules>
 	
 	<parent>

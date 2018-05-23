@@ -35,7 +35,7 @@ public class ProductApiAdapterRestController {
   }
 
   /**
-   * Fallback method called if the server is shutdown
+   * Fallback method called if the server is shutdown.
    *
    * @return an empty collection
    */
@@ -54,25 +54,39 @@ public class ProductApiAdapterRestController {
   public Collection<Product> allProducts() {
     return productClient.readProducts().getContent();
   }
-  
+
+  /**
+   * Gets the product by id.
+   *
+   * @param idProduct the id product
+   * @return the product by id
+   */
+  @GetMapping("/products/{id}")
+  @CrossOrigin(origins = "*")
+  public Product getProductById(@PathVariable("id") Long idProduct) {
+    return productClient.findById(idProduct);
+  }
+
   /**
    * Update product.
    *
+   * @param idProduct the id product
    * @param currentProduct the current product
    * @return the product
    */
   @PutMapping("/products/{id}")
   @CrossOrigin(origins = "*")
-  public ResponseEntity<String> updateProduct(@PathVariable("id") Long idProduct, @RequestBody Product currentProduct) {
+  public ResponseEntity<String> updateProduct(@PathVariable("id") Long idProduct,
+      @RequestBody Product currentProduct) {
     Product product = productClient.findById(idProduct);
-    if (product==null) {
-        return new ResponseEntity<String>(HttpStatus.NOT_FOUND);
+    if (product == null) {
+      return new ResponseEntity<String>(HttpStatus.NOT_FOUND);
     }
     product.setId(idProduct);
     product.setName(currentProduct.getName());
     product.setAmount(currentProduct.getAmount());
     productClient.updateProduct(idProduct, product);
-    
+
     return new ResponseEntity<String>(HttpStatus.OK);
   }
 }

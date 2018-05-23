@@ -1,0 +1,17 @@
+<h2>Product List</h2>
+
+<mat-list>
+  <mat-list-item *ngFor="let p of products">
+    <h3 mat-line>
+      {{p.name}} ({{p.amount}} u.)
+    
+    <button mat-icon-button (click)="addProduct(p)">
+      <mat-icon matListIcon>add</mat-icon>
+    </button>
+    <button mat-icon-button (click)="removeProduct(p)">
+      <mat-icon matListIcon>remove</mat-icon>
+    </button>
+  </h3>
+  </mat-list-item>
+</mat-list>
+

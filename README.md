@@ -24,7 +24,7 @@ The Angular project was generated with [Angular CLI](https://github.com/angular/
 
 To run this client it is necessary to have the [npm](https://www.npmjs.com/) installed and execute into the folder `stock-angular-client` the command `npm install`. After that you can execute `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build (in the directory `/dist` you can see a this build) 
 
-To run the application, execute `npm start` for a developer server. Navigate to [http://localhost:4200/](http://localhost:4200/). The application will automatically reload if you change any of the source files.
+To run the application, execute `npm start` or `ng serve` for a developer server. Navigate to [http://localhost:4200/](http://localhost:4200/). The application will automatically reload if you change any of the source files.
 
 In this url, you can see a list of product with 2 buttons: one of them to add a new product, and the other to retire a product (all changes are shown in the same list).
 

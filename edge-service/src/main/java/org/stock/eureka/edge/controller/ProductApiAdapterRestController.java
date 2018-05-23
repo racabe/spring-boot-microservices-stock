@@ -64,8 +64,6 @@ public class ProductApiAdapterRestController {
   @PutMapping("/products/{id}")
   @CrossOrigin(origins = "*")
   public ResponseEntity<String> updateProduct(@PathVariable("id") Long idProduct, @RequestBody Product currentProduct) {
-    System.out.println(currentProduct);
-    
     Product product = productClient.findById(idProduct);
     if (product==null) {
         return new ResponseEntity<String>(HttpStatus.NOT_FOUND);

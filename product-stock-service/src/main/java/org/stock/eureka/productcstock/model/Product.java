@@ -45,7 +45,6 @@ public class Product {
    * @param amount the amount
    */
   public Product(Long id, String name, Long amount) {
-    super();
     this.id = id;
     this.name = name;
     this.amount = amount;

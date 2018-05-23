@@ -5,11 +5,50 @@ package org.stock.eureka.edge.model;
  */
 public class Product {
 
+  /** The id. */
+  private Long id;
+
   /** The name. */
   private String name;
 
   /** The amount. */
   private Long amount;
+
+  /**
+   * Instantiates a new product.
+   */
+  public Product() {}
+
+  /**
+   * Instantiates a new product.
+   *
+   * @param id the id
+   * @param name the name
+   * @param amount the amount
+   */
+  public Product(Long id, String name, Long amount) {
+    this.id = id;
+    this.name = name;
+    this.amount = amount;
+  }
+
+  /**
+   * Gets the id.
+   *
+   * @return the id
+   */
+  public Long getId() {
+    return id;
+  }
+
+  /**
+   * Sets the id.
+   *
+   * @param id the new id
+   */
+  public void setId(Long id) {
+    this.id = id;
+  }
 
   /**
    * Gets the name.
@@ -45,6 +84,16 @@ public class Product {
    */
   public void setAmount(Long amount) {
     this.amount = amount;
+  }
+
+  /*
+   * (non-Javadoc)
+   * 
+   * @see java.lang.Object#toString()
+   */
+  @Override
+  public String toString() {
+    return "Product [id=" + id + ", name=" + name + ", amount=" + amount + "]";
   }
 
 }
